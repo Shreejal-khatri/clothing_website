@@ -2,11 +2,6 @@ const mongoose = require('mongoose');
 const Item = require('./Items');
 require('dotenv').config(); // Load environment variables from .env file
 
-// Connect to MongoDB
-// mongoose.connect('mongodb+srv://shreejalkhatri21:2121@cluster0.4kfac.mongodb.net/test', { 
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// })
 mongoose.connect(process.env.MONGO_URI, { 
   useNewUrlParser: true,
   useUnifiedTopology: true,
