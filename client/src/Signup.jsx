@@ -61,11 +61,11 @@ function Signup() {
     }
 
     axios.post('http://localhost:3000/register', { 
-      name, 
-      email, 
-      password, 
-      address, 
-      phone, 
+      name: name.trim(), 
+      email: email.trim().toLowerCase(), 
+      password: password.trim(), 
+      address: address.trim(), 
+      phone: phone.trim(), 
       recaptchaToken 
     })
     .then(response => {
